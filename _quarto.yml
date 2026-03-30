@@ -1,10 +1,13 @@
 project:
   type: website
   output-dir: _site
-  title: "Getting Started"
+  title: "Getting Started with Starsim"
+  render:
+    - README.md
+    - "*.md"
 
 website:
-  title: "Getting Started"
+  title: "Getting Started with Starsim"
   image: /assets/starsim-logo.png
   favicon: /assets/favicon.ico
 
@@ -15,7 +18,7 @@ website:
     type: overlay
 
   page-footer:
-    center: "© 2025–2026, Gates Foundation. All rights reserved. [Privacy and Cookies Notice](https://www.gatesfoundation.org/Privacy-and-Cookies-Notice) | [Terms of Use](https://www.gatesfoundation.org/Terms-of-Use)"
+    center: "© 2026 Starsim Development Team / Gates Foundation. All rights reserved. [Privacy and Cookies Notice](https://www.gatesfoundation.org/Privacy-and-Cookies-Notice) | [Terms of Use](https://www.gatesfoundation.org/Terms-of-Use)"
     right:
       - icon: github
         href: https://github.com/starsimhub/getting-started
@@ -39,15 +42,15 @@ website:
         href: https://starsim.org
 
     left:
-      - href: index.qmd
+      - href: README.md
         text: Home
-      - href: 1_python.md
+      - href: python.md
         text: Python
-      - href: 2_ai.md
+      - href: ai.md
         text: AI
-      - href: 3_guidelines.md
+      - href: guidelines.md
         text: Guidelines
-      - href: 4_comms.md
+      - href: comms.md
         text: Communication
 
 format:
