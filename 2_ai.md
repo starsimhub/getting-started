@@ -6,16 +6,10 @@
 
 ### Installation
 
-1. Install [Node.js](https://nodejs.org/) (v18+).
-2. Install Claude Code:
-
-   ```bash
-   npm install -g @anthropic-ai/claude-code
-   ```
-
-3. In VS Code, install the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code).
-4. Open the Claude Code panel (Ctrl+Shift+P, then "Claude Code: Open").
-5. Follow the prompts to authenticate with your Anthropic account.
+1. If you don't have one already, sign up for an Anthropic account.
+2. In VS Code, install the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) (see [installation details](https://code.claude.com/docs/en/vs-code))
+3. Open the Claude Code panel (Ctrl+Shift+P, then "Claude Code: Open").
+4. Follow the prompts to authenticate with your Anthropic account.
 
 ### Usage
 
@@ -27,11 +21,15 @@
 
 The [starsim-ai](https://github.com/starsimhub/starsim_ai) plugin gives Claude Code specialized knowledge about the Starsim framework -- including architecture, style conventions, and API patterns.
 
-Install it with:
+To install:
 
-```bash
-claude plugin add starsim-ai --url https://github.com/starsimhub/starsim_ai
-```
+1. Type `/` to see the command menu (or click on the slash button)
+2. Click on "Manage plugins"
+3. Go to "Marketplaces"
+4. Add https://github.com/starsimhub/starsim_ai
+5. Select "Starsim-AI" (and any other plugins you want from that marketplace)
+6. Go back to the list of plugins, find Starsim-AI, and click "Install".
+7. Restart VS Code.
 
 Once installed, Claude Code will automatically use the plugin's skills when you're working on Starsim projects. This includes guidance on:
 
@@ -39,3 +37,5 @@ Once installed, Claude Code will automatically use the plugin's skills when you'
 - Disease models, networks, and interventions
 - Calibration and analysis
 - Starsim coding style and conventions
+
+_Note:_ While Claude usually picks up the Starsim-AI plugin automatically, you can also ask to use it explicitly, e.g. "Use the Starsim-AI plugin to help me create tests for this project."
