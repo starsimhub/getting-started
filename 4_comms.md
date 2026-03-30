@@ -10,7 +10,7 @@
 
 ## Teams
 
-Teams is used for internal team discussions. For discussions that are either intentionally public (e.g., planning a new feature) or for which there is no harm in being public (e.g., who is going to review a PR), prefer GitHub or Slack. For discussions that are or could be sensitive (e.g., planning an internal application, discussing non-public data, etc.), always use Teams.
+The Gates Foundation uses Teams for internal team discussions. For discussions that are either intentionally public (e.g., planning a new feature) or for which there is no harm in being public (e.g., who is going to review a PR), prefer GitHub or Slack. For discussions that are or could be sensitive (e.g., planning an internal application, discussing non-public data, etc.), always use Teams.
 
 ## Email
 
