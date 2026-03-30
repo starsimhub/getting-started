@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "python.html",
+    "href": "python.html",
+    "title": "Getting started with Python",
+    "section": "",
+    "text": "This guide presents three options for getting up and running with Starsim. It assumes no prior knowledge of Python. If you have used Python before and know what setup you prefer, you are always welcome to use that; Starsim works with (virtually) any Python installation.\nNote: since this document assumes you have no prior Python experience, it does not discuss virtual environments. These are useful (sometimes critical) for juggling multiple different Python projects. However, if you will primarily be working on one Python project at a time, or working on a set of projects that all have similar dependencies, you probably don’t need them.\n\n\nBefore installing Starsim, you need to install a Python environment and editor.\n\n\nVS Code is by far the most commonly used editor among Starsim team members due to its excellent Python and AI support.\n\nDownload and install VS Code.\nInstall the Python extension.\nVS Code will prompt you to install Python if it’s not already on your system. Alternatively, download Python from python.org.\nFrom the terminal inside VS Code, install Starsim: pip install starsim\nCheck that it worked: create a file called e.g. demo.py with the contents import starsim as ss; ss.demo(), and then click on the play button at the top right of the editor. The script should run, produce text output, and produce a plot.\n\nMore info: VS Code Python tutorial\n\n\n\nIf you are coming from an RStudio background, Spyder might feel most familiar to you. Compared to VS Code, it’s very basic (and lacks AI support), but it excels at quickly running scripts and working in the command line. Some people use VS Code for AI-heavy workflows, and then switch to Spyder for quick interactive development and debugging.\n\nInstall Miniforge. This will add the commands python, conda, and pip (among others) to your terminal.\nFrom your terminal, install Spyder: conda install spyder\nInstall Starsim: pip install starsim\nCheck that it worked: from the Spyder console, run import starsim as ss; ss.demo(). This should produce text output and produce a plot. (Note: if you want your plots to appear as new windows rather than in the “Plots” pane, you can change this option under Tools → Preferences.)\n\nMore info: Conda getting started | Spyder docs\nNote: If you want to use both Spyder and VS Code, install Conda + Spyder first, then install VS Code. This ensures that VS Code uses the same Python installation as Spyder.\n\n\n\n\nThe instructions above use pip, which is the standard Python package installer that comes bundled with Python. However, you may increasingly see projects provide instructions for using uv instead:\n# Install uv (see https://docs.astral.sh/uv/)\ncurl -LsSf https://astral.sh/uv/install.sh | sh\n\n# Use it like pip\nuv pip install somepackage\nuv is much faster than pip, but if you’re reading this guide, the difference is almost certainly going to be negligble to you since you are unlikely to be creating new Python environments multiple times a day. The two tools are interchangeable, so use whichever you prefer."
+  },
+  {
+    "objectID": "python.html#editor-options",
+    "href": "python.html#editor-options",
+    "title": "Getting started with Python",
+    "section": "",
+    "text": "Before installing Starsim, you need to install a Python environment and editor.\n\n\nVS Code is by far the most commonly used editor among Starsim team members due to its excellent Python and AI support.\n\nDownload and install VS Code.\nInstall the Python extension.\nVS Code will prompt you to install Python if it’s not already on your system. Alternatively, download Python from python.org.\nFrom the terminal inside VS Code, install Starsim: pip install starsim\nCheck that it worked: create a file called e.g. demo.py with the contents import starsim as ss; ss.demo(), and then click on the play button at the top right of the editor. The script should run, produce text output, and produce a plot.\n\nMore info: VS Code Python tutorial\n\n\n\nIf you are coming from an RStudio background, Spyder might feel most familiar to you. Compared to VS Code, it’s very basic (and lacks AI support), but it excels at quickly running scripts and working in the command line. Some people use VS Code for AI-heavy workflows, and then switch to Spyder for quick interactive development and debugging.\n\nInstall Miniforge. This will add the commands python, conda, and pip (among others) to your terminal.\nFrom your terminal, install Spyder: conda install spyder\nInstall Starsim: pip install starsim\nCheck that it worked: from the Spyder console, run import starsim as ss; ss.demo(). This should produce text output and produce a plot. (Note: if you want your plots to appear as new windows rather than in the “Plots” pane, you can change this option under Tools → Preferences.)\n\nMore info: Conda getting started | Spyder docs\nNote: If you want to use both Spyder and VS Code, install Conda + Spyder first, then install VS Code. This ensures that VS Code uses the same Python installation as Spyder."
+  },
+  {
+    "objectID": "python.html#package-management-pip-vs-uv",
+    "href": "python.html#package-management-pip-vs-uv",
+    "title": "Getting started with Python",
+    "section": "",
+    "text": "The instructions above use pip, which is the standard Python package installer that comes bundled with Python. However, you may increasingly see projects provide instructions for using uv instead:\n# Install uv (see https://docs.astral.sh/uv/)\ncurl -LsSf https://astral.sh/uv/install.sh | sh\n\n# Use it like pip\nuv pip install somepackage\nuv is much faster than pip, but if you’re reading this guide, the difference is almost certainly going to be negligble to you since you are unlikely to be creating new Python environments multiple times a day. The two tools are interchangeable, so use whichever you prefer."
+  },
+  {
+    "objectID": "comms.html",
+    "href": "comms.html",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "GitHub is where Starsim is built and lives. Use to open issues, start discussions, plan projects, etc. Everything on GitHub is public by default, so it’s the best place to ensure transparency and build commuity. Of course, never share anything sensitive on GitHub (either in a commit or in a comment).\n\n\n\nSlack is our primary means of rapid back-and-forth communication, when it would be impractical to use GitHub (e.g. many messages back and forth discussing a bug or potential feature). Use it for quick questions, status updates, sharing links, and informal discussion. Keep conversations in the appropriate channels rather than DMs when possible so others can benefit.\n\n\n\nThe Gates Foundation uses Teams for internal team discussions. For discussions that are either intentionally public (e.g., planning a new feature) or for which there is no harm in being public (e.g., who is going to review a PR), prefer GitHub or Slack. For discussions that are or could be sensitive (e.g., planning an internal application, discussing non-public data, etc.), always use Teams.\n\n\n\nUse email for communication with external collaborators, formal requests, and anything that needs a longer-form written record. For Starsim technical matters, prefer GitHub or Slack.\n\n\n\n\nStand-ups: Brief daily or weekly check-ins to share progress and flag blockers.\nSprint planning: Periodic meetings to prioritize and assign work.\nAd hoc: Scheduled as needed for design discussions, debugging sessions, or onboarding.\n\n\n\n\n\nIf you’re stuck on something for more than ~30 minutes, ask for help.\nDocument decisions and context in GitHub issues or PRs, not just in Slack (where messages get buried).\nWhen in doubt about process or conventions, check the style guide or ask a teammate."
+  },
+  {
+    "objectID": "comms.html#github",
+    "href": "comms.html#github",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "GitHub is where Starsim is built and lives. Use to open issues, start discussions, plan projects, etc. Everything on GitHub is public by default, so it’s the best place to ensure transparency and build commuity. Of course, never share anything sensitive on GitHub (either in a commit or in a comment)."
+  },
+  {
+    "objectID": "comms.html#slack",
+    "href": "comms.html#slack",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "Slack is our primary means of rapid back-and-forth communication, when it would be impractical to use GitHub (e.g. many messages back and forth discussing a bug or potential feature). Use it for quick questions, status updates, sharing links, and informal discussion. Keep conversations in the appropriate channels rather than DMs when possible so others can benefit."
+  },
+  {
+    "objectID": "comms.html#teams",
+    "href": "comms.html#teams",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "The Gates Foundation uses Teams for internal team discussions. For discussions that are either intentionally public (e.g., planning a new feature) or for which there is no harm in being public (e.g., who is going to review a PR), prefer GitHub or Slack. For discussions that are or could be sensitive (e.g., planning an internal application, discussing non-public data, etc.), always use Teams."
+  },
+  {
+    "objectID": "comms.html#email",
+    "href": "comms.html#email",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "Use email for communication with external collaborators, formal requests, and anything that needs a longer-form written record. For Starsim technical matters, prefer GitHub or Slack."
+  },
+  {
+    "objectID": "comms.html#meetings",
+    "href": "comms.html#meetings",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "Stand-ups: Brief daily or weekly check-ins to share progress and flag blockers.\nSprint planning: Periodic meetings to prioritize and assign work.\nAd hoc: Scheduled as needed for design discussions, debugging sessions, or onboarding."
+  },
+  {
+    "objectID": "comms.html#general-tips",
+    "href": "comms.html#general-tips",
+    "title": "Communication and culture",
+    "section": "",
+    "text": "If you’re stuck on something for more than ~30 minutes, ask for help.\nDocument decisions and context in GitHub issues or PRs, not just in Slack (where messages get buried).\nWhen in doubt about process or conventions, check the style guide or ask a teammate."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Getting Started with Starsim",
+    "section": "",
+    "text": "Welcome to the Starsim team! This guide covers everything you need to get set up and start contributing.\n\nPython – Setting up Python and installing Starsim\nAI – Getting started with AI-assisted development\nGuidelines – Coding conventions and style guide\nCommunication – Communication channels and culture"
+  },
+  {
+    "objectID": "ai.html",
+    "href": "ai.html",
+    "title": "Getting started with AI-assisted development",
+    "section": "",
+    "text": "Claude Code is Anthropic’s AI coding assistant that runs directly in your terminal and IDE. It can read your codebase, edit files, run commands, and help you build and debug software.\n\n\n\nIf you don’t have one already, sign up for an Anthropic account.\nIn VS Code, install the Claude Code extension (see installation details)\nOpen the Claude Code panel (Ctrl+Shift+P, then “Claude Code: Open”).\nFollow the prompts to authenticate with your Anthropic account.\n\n\n\n\n\nOpen the Claude Code panel in VS Code and type your request in natural language.\nClaude Code can read and edit files, run terminal commands, search your codebase, and more.\nUse /help within Claude Code for a full list of commands.\n\n\n\n\n\nThe starsim-ai plugin gives Claude Code specialized knowledge about the Starsim framework – including architecture, style conventions, and API patterns.\nTo install:\n\nType / to see the command menu (or click on the slash button)\nClick on “Manage plugins”\nGo to “Marketplaces”\nAdd https://github.com/starsimhub/starsim_ai\nSelect “Starsim-AI” (and any other plugins you want from that marketplace)\nGo back to the list of plugins, find Starsim-AI, and click “Install”.\nRestart VS Code.\n\nOnce installed, Claude Code will automatically use the plugin’s skills when you’re working on Starsim projects. This includes guidance on:\n\nSimulation setup and configuration\nDisease models, networks, and interventions\nCalibration and analysis\nStarsim coding style and conventions\n\nNote: While Claude usually picks up the Starsim-AI plugin automatically, you can also ask to use it explicitly, e.g. “Use the Starsim-AI plugin to help me create tests for this project.”"
+  },
+  {
+    "objectID": "ai.html#claude-code-in-vs-code",
+    "href": "ai.html#claude-code-in-vs-code",
+    "title": "Getting started with AI-assisted development",
+    "section": "",
+    "text": "Claude Code is Anthropic’s AI coding assistant that runs directly in your terminal and IDE. It can read your codebase, edit files, run commands, and help you build and debug software.\n\n\n\nIf you don’t have one already, sign up for an Anthropic account.\nIn VS Code, install the Claude Code extension (see installation details)\nOpen the Claude Code panel (Ctrl+Shift+P, then “Claude Code: Open”).\nFollow the prompts to authenticate with your Anthropic account.\n\n\n\n\n\nOpen the Claude Code panel in VS Code and type your request in natural language.\nClaude Code can read and edit files, run terminal commands, search your codebase, and more.\nUse /help within Claude Code for a full list of commands."
+  },
+  {
+    "objectID": "ai.html#installing-the-starsim-ai-plugin",
+    "href": "ai.html#installing-the-starsim-ai-plugin",
+    "title": "Getting started with AI-assisted development",
+    "section": "",
+    "text": "The starsim-ai plugin gives Claude Code specialized knowledge about the Starsim framework – including architecture, style conventions, and API patterns.\nTo install:\n\nType / to see the command menu (or click on the slash button)\nClick on “Manage plugins”\nGo to “Marketplaces”\nAdd https://github.com/starsimhub/starsim_ai\nSelect “Starsim-AI” (and any other plugins you want from that marketplace)\nGo back to the list of plugins, find Starsim-AI, and click “Install”.\nRestart VS Code.\n\nOnce installed, Claude Code will automatically use the plugin’s skills when you’re working on Starsim projects. This includes guidance on:\n\nSimulation setup and configuration\nDisease models, networks, and interventions\nCalibration and analysis\nStarsim coding style and conventions\n\nNote: While Claude usually picks up the Starsim-AI plugin automatically, you can also ask to use it explicitly, e.g. “Use the Starsim-AI plugin to help me create tests for this project.”"
+  },
+  {
+    "objectID": "guidelines.html",
+    "href": "guidelines.html",
+    "title": "Coding guidelines",
+    "section": "",
+    "text": "All code should follow the conventions in the Starsim style guide. This covers Python style, documentation, testing, and design philosophy.\n\n\n\nFor broader engineering practices, project management, and collaboration workflows, see the engineering guide."
+  },
+  {
+    "objectID": "guidelines.html#style-guide",
+    "href": "guidelines.html#style-guide",
+    "title": "Coding guidelines",
+    "section": "",
+    "text": "All code should follow the conventions in the Starsim style guide. This covers Python style, documentation, testing, and design philosophy."
+  },
+  {
+    "objectID": "guidelines.html#engineering-guide",
+    "href": "guidelines.html#engineering-guide",
+    "title": "Coding guidelines",
+    "section": "",
+    "text": "For broader engineering practices, project management, and collaboration workflows, see the engineering guide."
+  }
+]
