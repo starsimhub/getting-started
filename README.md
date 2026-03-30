@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with Starsim"
-aliases:
-  - index.html
+output-file: index.html
 ---
 
 Welcome to the Starsim team! This guide covers everything you need to get set up and start contributing.
