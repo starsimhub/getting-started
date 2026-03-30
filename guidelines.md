@@ -6,4 +6,4 @@ All code should follow the conventions in the [Starsim style guide](https://gith
 
 ## Engineering guide
 
-For broader engineering practices, project management, and collaboration workflows, see the [engineering guide](https://docs.google.com/document/d/1U6CvI5pINMRAm1hI5FzB1t2UCYADG0QLhqYoVezlCaA/edit?tab=t.0#heading=h.5k9qk9yz5kd9).
+For broader engineering practices, project management, and collaboration workflows, see the [engineering guide](https://docs.google.com/document/d/1U6CvI5pINMRAm1hI5FzB1t2UCYADG0QLhqYoVezlCaA/edit).
