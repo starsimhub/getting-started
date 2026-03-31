@@ -1,5 +1,4 @@
 #!/bin/bash
 # Preview site with live reloading
 
-cd "$(dirname "$0")"
 quarto preview
