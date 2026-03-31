@@ -1,9 +1,6 @@
----
-title: "Getting Started with Starsim"
-output-file: index.html
----
+# Getting Started with Starsim
 
-Welcome to the [Starsim](https://starsim.org) team! This guide covers everything you need to get set up and start contributing.
+Welcome to the [Starsim](https://starsim.org) team! This guide covers everything you need to get set up and start participating.
 
 - [**Python**](python.md) -- Setting up Python and installing Starsim
 - [**AI**](ai.md) -- Getting started with AI-assisted development

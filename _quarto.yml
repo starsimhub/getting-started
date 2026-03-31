@@ -1,13 +1,10 @@
 project:
   type: website
   output-dir: _site
-  title: "Getting Started with Starsim"
-  render:
-    - README.md
-    - "*.md"
+  title: "Getting Started"
 
 website:
-  title: "Getting Started with Starsim"
+  title: "Getting Started"
   image: /assets/starsim-logo.png
   favicon: /assets/favicon.ico
 
@@ -42,7 +39,7 @@ website:
         href: https://starsim.org
 
     left:
-      - href: README.md
+      - href: index.qmd
         text: Home
       - href: python.md
         text: Python
