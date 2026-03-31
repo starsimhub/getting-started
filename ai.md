@@ -26,7 +26,7 @@ To install:
 1. Type `/` to see the command menu (or click on the slash button)
 2. Click on "Manage plugins"
 3. Go to "Marketplaces"
-4. Add https://github.com/starsimhub/starsim_ai
+4. Add <https://github.com/starsimhub/starsim_ai>
 5. Select "Starsim-AI" (and any other plugins you want from that marketplace)
 6. Go back to the list of plugins, find Starsim-AI, and click "Install".
 7. Restart VS Code.

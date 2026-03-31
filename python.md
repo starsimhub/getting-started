@@ -21,9 +21,16 @@ VS Code is by far the most commonly used editor among Starsim team members due t
 
 More info: [VS Code Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 
-### Option 2: Conda-forge + Spyder
+### Option 2: Cursor
 
-If you are coming from an RStudio background, Spyder might feel most familiar to you. Compared to VS Code, it's very basic (and lacks AI support), but it excels at quickly running scripts and working in the command line. Some people use VS Code for AI-heavy workflows, and then switch to Spyder for quick interactive development and debugging.
+[Cursor](https://cursor.com/) is a popular AI-first editor that is based on (and intercompatible with) VS Code. The main difference is that Cursor uses its own system for managing AI agents. This system is often considerably faster than VS Code + Claude Code, but is often not as capable for large-scale tasks. You might want to try both Cursor and VS Code for a while and see which one you like better.
+
+1. Download and install [Cursor](https://cursor.com/).
+2. Follow the remaining steps above for VS Code.
+
+### Option 3: Conda-forge + Spyder
+
+If you are coming from an [RStudio](https://posit.co/download/rstudio-desktop/) background, Spyder might feel most familiar to you. Compared to VS Code, it's very basic (and lacks AI support), but it excels at quickly running scripts and working in the command line. Some people use VS Code for AI-heavy workflows, and then switch to Spyder for quick interactive development and debugging.
 
 1. Install [Miniforge](https://conda-forge.org/download/). This will add the commands `python`, `conda`, and `pip` (among others) to your terminal.
 2. From your terminal, install Spyder: `conda install spyder`
@@ -33,6 +40,12 @@ If you are coming from an RStudio background, Spyder might feel most familiar to
 More info: [Conda getting started](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) | [Spyder docs](https://docs.spyder-ide.org/)
 
 _Note:_ If you want to use both Spyder and VS Code, install Conda + Spyder first, then install VS Code. This ensures that VS Code uses the same Python installation as Spyder.
+
+### Other options
+
+- [Positron](https://positron.posit.co/) is a new Python and R editor from the makers of RStudio. It is somewhat like a hybrid between VS Code and Spyder.
+- [PyCharm](https://www.jetbrains.com/pycharm/) is one of the most popular Python editors. It is extremely fully featured, including GitHub and AI integration. We don't recommend it here because it has a steeper learning curve than VS Code, and VS Code now has more or less the same features.
+- Python files are just text files, so you can use a text editor like [Sublime](https://www.sublimetext.com/) and run directly from the command line (`python your_script.py`). This workflow is useful for power users who need to switch between files and projects quickly, but is less likely to be ideal for someone just getting started in Python.
 
 
 ## Package management: pip vs uv
