@@ -1,4 +1,5 @@
 #!/bin/bash
 # Build & publish site to GitHub Pages
 
+cd "$(dirname "$0")"
 quarto publish gh-pages
