@@ -1,4 +1,6 @@
-# Getting started with AI-assisted development
+---
+title: "AI-assisted development"
+---
 
 ## Claude Code in VS Code
 

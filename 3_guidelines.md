@@ -1,4 +1,6 @@
-# Coding guidelines
+---
+title: "Coding guidelines"
+---
 
 ## Style guide
 

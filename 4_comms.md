@@ -1,4 +1,6 @@
-# Communication and culture
+---
+title: "Communication and culture"
+---
 
 ## GitHub
 
