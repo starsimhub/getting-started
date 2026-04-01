@@ -39,3 +39,9 @@ Once installed, Claude Code will automatically use the plugin's skills when you'
 - Starsim coding style and conventions
 
 _Note:_ While Claude usually picks up the Starsim-AI plugin automatically, you can also ask to use it explicitly, e.g. "Use the Starsim-AI plugin to help me create tests for this project."
+
+## Cursor
+
+AI support is built into Cursor; there isn't any additional setup.
+
+You can [install plugins](https://cursor.com/docs/plugins) the same way in Cursor as Claude Code.
