@@ -1,7 +1,3 @@
----
-pagetitle: "Coding guidelines"
----
-
 # Coding guidelines
 
 ## Style guide

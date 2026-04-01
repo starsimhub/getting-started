@@ -1,0 +1,65 @@
+site_name: Getting Started
+site_url: https://starsimhub.github.io/getting-started/
+repo_url: https://github.com/starsimhub/getting-started
+repo_name: starsimhub/getting-started
+
+nav:
+  - Home: index.md
+  - Python: 1_python.md
+  - AI: 2_ai.md
+  - Guidelines: 3_guidelines.md
+  - Communication: 4_comms.md
+
+theme:
+  name: material
+  logo: assets/images/starsim-logo.png
+  favicon: assets/images/favicon.ico
+  font:
+    text: Raleway
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - navigation.top
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/starsimhub/getting-started
+    - icon: fontawesome/solid/envelope
+      link: mailto:info@starsim.org
+    - icon: fontawesome/solid/globe
+      link: https://starsim.org
+
+copyright: >
+  &copy; 2026 Starsim Development Team / Gates Foundation. All rights reserved.
+  <a href="https://www.gatesfoundation.org/Privacy-and-Cookies-Notice">Privacy and Cookies Notice</a> |
+  <a href="https://www.gatesfoundation.org/Terms-of-Use">Terms of Use</a>
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+plugins:
+  - search

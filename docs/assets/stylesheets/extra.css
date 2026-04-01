@@ -1,0 +1,41 @@
+/* Global font settings */
+body, p {
+  font-family: "Raleway", "Montserrat", "Lato", "Open Sans", sans-serif;
+  font-size: 1.0em;
+}
+
+/* Prevent excessive spacing in terminal output */
+pre {
+  line-height: 1.2;
+}
+
+/* Do not insert a space between a paragraph and a list */
+p:has(+ ul) {
+  margin-bottom: 0.0em;
+}
+
+/* Logo sizing */
+.md-header__button.md-logo img {
+  height: 2em;
+  min-height: 40px;
+}
+
+/* Dark mode overrides */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #151515;
+  --md-default-fg-color: #f8f8f8;
+  --md-primary-fg-color: #242426;
+  --md-primary-bg-color: #f8f8f8;
+  --md-accent-fg-color: #75A8D9;
+  --md-typeset-a-color: #75A8D9;
+  --md-code-fg-color: rgb(192, 128, 216);
+  --md-code-bg-color: rgba(0, 0, 0, 0.3);
+  --md-footer-bg-color: #151515;
+  --md-footer-bg-color--dark: #111111;
+}
+
+/* Light mode link color */
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #447099;
+  --md-accent-fg-color: #447099;
+}
