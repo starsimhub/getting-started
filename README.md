@@ -6,3 +6,5 @@ Welcome to the [Starsim](https://starsim.org) team! This guide covers everything
 - [**AI**](2_ai.md) -- Getting started with AI-assisted development
 - [**Guidelines**](3_guidelines.md) -- Coding conventions and style guide
 - [**Communication**](4_comms.md) -- Communication channels and culture
+
+_Last updated:_ 2026.03.31
