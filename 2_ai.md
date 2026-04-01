@@ -1,6 +1,8 @@
 ---
-title: "AI-assisted development"
+pagetitle: "AI-assisted development"
 ---
+
+# AI-assisted development
 
 ## Claude Code in VS Code
 

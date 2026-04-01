@@ -1,6 +1,8 @@
 ---
-title: "Communication and culture"
+pagetitle: "Communication and culture"
 ---
+
+# Communication and culture
 
 ## GitHub
 

@@ -1,6 +1,8 @@
 ---
-title: "Installing Python"
+pagetitle: "Installing Python"
 ---
+
+# Installing Python
 
 This guide presents three options for getting up and running with Starsim. It assumes no prior knowledge of Python. If you have used Python before and know what setup you prefer, you are always welcome to use that; Starsim works with (virtually) any Python installation.
 
