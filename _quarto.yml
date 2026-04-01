@@ -41,13 +41,13 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: python.md
+      - href: 1_python.md
         text: Python
-      - href: ai.md
+      - href: 2_ai.md
         text: AI
-      - href: guidelines.md
+      - href: 3_guidelines.md
         text: Guidelines
-      - href: comms.md
+      - href: 4_comms.md
         text: Communication
 
 format:
