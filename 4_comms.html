@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>python – Getting Started with Starsim</title>
+<title>Communication and culture – Getting Started</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -129,19 +95,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./python.html" aria-current="page"> 
+    <a class="nav-link" href="./1_python.html"> 
 <span class="menu-text">Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ai.html"> 
+    <a class="nav-link" href="./2_ai.html"> 
 <span class="menu-text">AI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./guidelines.html"> 
+    <a class="nav-link" href="./3_guidelines.html"> 
 <span class="menu-text">Guidelines</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./comms.html"> 
+    <a class="nav-link active" href="./4_comms.html" aria-current="page"> 
 <span class="menu-text">Communication</span></a>
   </li>  
 </ul>
@@ -164,14 +130,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started-with-python" id="toc-getting-started-with-python" class="nav-link active" data-scroll-target="#getting-started-with-python">Getting started with Python</a>
+  <li><a href="#communication-and-culture" id="toc-communication-and-culture" class="nav-link active" data-scroll-target="#communication-and-culture">Communication and culture</a>
   <ul class="collapse">
-  <li><a href="#editor-options" id="toc-editor-options" class="nav-link" data-scroll-target="#editor-options">Editor options</a>
-  <ul class="collapse">
-  <li><a href="#option-1-vs-code-recommended" id="toc-option-1-vs-code-recommended" class="nav-link" data-scroll-target="#option-1-vs-code-recommended">Option 1: VS Code (recommended)</a></li>
-  <li><a href="#option-2-conda-forge-spyder" id="toc-option-2-conda-forge-spyder" class="nav-link" data-scroll-target="#option-2-conda-forge-spyder">Option 2: Conda-forge + Spyder</a></li>
-  </ul></li>
-  <li><a href="#package-management-pip-vs-uv" id="toc-package-management-pip-vs-uv" class="nav-link" data-scroll-target="#package-management-pip-vs-uv">Package management: pip vs uv</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
+  <li><a href="#slack" id="toc-slack" class="nav-link" data-scroll-target="#slack">Slack</a></li>
+  <li><a href="#teams" id="toc-teams" class="nav-link" data-scroll-target="#teams">Teams</a></li>
+  <li><a href="#email" id="toc-email" class="nav-link" data-scroll-target="#email">Email</a></li>
+  <li><a href="#meetings" id="toc-meetings" class="nav-link" data-scroll-target="#meetings">Meetings</a></li>
+  <li><a href="#general-tips" id="toc-general-tips" class="nav-link" data-scroll-target="#general-tips">General tips</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/starsimhub/getting-started/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -182,47 +148,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="getting-started-with-python" class="level1">
-<h1>Getting started with Python</h1>
-<p>This guide presents three options for getting up and running with Starsim. It assumes no prior knowledge of Python. If you have used Python before and know what setup you prefer, you are always welcome to use that; Starsim works with (virtually) any Python installation.</p>
-<p>Note: since this document assumes you have no prior Python experience, it does not discuss <a href="https://code.visualstudio.com/docs/python/environments">virtual environments</a>. These are useful (sometimes critical) for juggling multiple different Python projects. However, if you will primarily be working on one Python project at a time, or working on a set of projects that all have similar dependencies, you probably don’t need them.</p>
-<section id="editor-options" class="level2">
-<h2 class="anchored" data-anchor-id="editor-options">Editor options</h2>
-<p>Before installing Starsim, you need to install a Python environment and editor.</p>
-<section id="option-1-vs-code-recommended" class="level3">
-<h3 class="anchored" data-anchor-id="option-1-vs-code-recommended">Option 1: VS Code (recommended)</h3>
-<p>VS Code is by far the most commonly used editor among Starsim team members due to its excellent Python and AI support.</p>
-<ol type="1">
-<li>Download and install <a href="https://code.visualstudio.com/">VS Code</a>.</li>
-<li>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a>.</li>
-<li>VS Code will prompt you to install Python if it’s not already on your system. Alternatively, download Python from <a href="https://www.python.org/downloads/">python.org</a>.</li>
-<li>From the terminal inside VS Code, install Starsim: <code>pip install starsim</code></li>
-<li>Check that it worked: create a file called e.g.&nbsp;<code>demo.py</code> with the contents <code>import starsim as ss; ss.demo()</code>, and then click on the play button at the top right of the editor. The script should run, produce text output, and produce a plot.</li>
-</ol>
-<p>More info: <a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code Python tutorial</a></p>
+<section id="communication-and-culture" class="level1">
+<h1>Communication and culture</h1>
+<section id="github" class="level2">
+<h2 class="anchored" data-anchor-id="github">GitHub</h2>
+<p><a href="https://github.com/starsimhub">GitHub</a> is where Starsim is built and lives. Use to open issues, start discussions, plan projects, etc. Everything on GitHub is public by default, so it’s the best place to ensure transparency and build commuity. Of course, never share anything sensitive on GitHub (either in a commit or in a comment).</p>
 </section>
-<section id="option-2-conda-forge-spyder" class="level3">
-<h3 class="anchored" data-anchor-id="option-2-conda-forge-spyder">Option 2: Conda-forge + Spyder</h3>
-<p>If you are coming from an RStudio background, Spyder might feel most familiar to you. Compared to VS Code, it’s very basic (and lacks AI support), but it excels at quickly running scripts and working in the command line. Some people use VS Code for AI-heavy workflows, and then switch to Spyder for quick interactive development and debugging.</p>
-<ol type="1">
-<li>Install <a href="https://conda-forge.org/download/">Miniforge</a>. This will add the commands <code>python</code>, <code>conda</code>, and <code>pip</code> (among others) to your terminal.</li>
-<li>From your terminal, install Spyder: <code>conda install spyder</code></li>
-<li>Install Starsim: <code>pip install starsim</code></li>
-<li>Check that it worked: from the Spyder console, run <code>import starsim as ss; ss.demo()</code>. This should produce text output and produce a plot. (Note: if you want your plots to appear as new windows rather than in the “Plots” pane, you can change this option under Tools → Preferences.)</li>
-</ol>
-<p>More info: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">Conda getting started</a> | <a href="https://docs.spyder-ide.org/">Spyder docs</a></p>
-<p><em>Note:</em> If you want to use both Spyder and VS Code, install Conda + Spyder first, then install VS Code. This ensures that VS Code uses the same Python installation as Spyder.</p>
+<section id="slack" class="level2">
+<h2 class="anchored" data-anchor-id="slack">Slack</h2>
+<p><a href="https://starsimhub.slack.com">Slack</a> is our primary means of rapid back-and-forth communication, when it would be impractical to use GitHub (e.g.&nbsp;many messages back and forth discussing a bug or potential feature). Use it for quick questions, status updates, sharing links, and informal discussion. Keep conversations in the appropriate channels rather than DMs when possible so others can benefit.</p>
 </section>
+<section id="teams" class="level2">
+<h2 class="anchored" data-anchor-id="teams">Teams</h2>
+<p>The Gates Foundation uses Teams for internal team discussions. For discussions that are either intentionally public (e.g., planning a new feature) or for which there is no harm in being public (e.g., who is going to review a PR), prefer GitHub or Slack. For discussions that are or could be sensitive (e.g., planning an internal application, discussing non-public data, etc.), always use Teams.</p>
 </section>
-<section id="package-management-pip-vs-uv" class="level2">
-<h2 class="anchored" data-anchor-id="package-management-pip-vs-uv">Package management: pip vs uv</h2>
-<p>The instructions above use <code>pip</code>, which is the standard Python package installer that comes bundled with Python. However, you may increasingly see projects provide instructions for using <code>uv</code> instead:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install uv (see https://docs.astral.sh/uv/)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use it like pip</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install somepackage</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>uv</code> is much faster than <code>pip</code>, but if you’re reading this guide, the difference is almost certainly going to be negligble to you since you are unlikely to be creating new Python environments multiple times a day. The two tools are interchangeable, so use whichever you prefer.</p>
+<section id="email" class="level2">
+<h2 class="anchored" data-anchor-id="email">Email</h2>
+<p>Use email for communication with external collaborators, formal requests, and anything that needs a longer-form written record. For Starsim technical matters, prefer GitHub or Slack.</p>
+</section>
+<section id="meetings" class="level2">
+<h2 class="anchored" data-anchor-id="meetings">Meetings</h2>
+<ul>
+<li><strong>Stand-ups</strong>: Brief daily or weekly check-ins to share progress and flag blockers.</li>
+<li><strong>Sprint planning</strong>: Periodic meetings to prioritize and assign work.</li>
+<li><strong>Ad hoc</strong>: Scheduled as needed for design discussions, debugging sessions, or onboarding.</li>
+</ul>
+</section>
+<section id="general-tips" class="level2">
+<h2 class="anchored" data-anchor-id="general-tips">General tips</h2>
+<ul>
+<li>If you’re stuck on something for more than ~30 minutes, ask for help.</li>
+<li>Document decisions and context in GitHub issues or PRs, not just in Slack (where messages get buried).</li>
+<li>When in doubt about process or conventions, check the <a href="https://github.com/starsimhub/style_guide">style guide</a> or ask a teammate.</li>
+</ul>
 
 
 </section>
@@ -463,7 +421,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/starsimhub\.github\.io\/getting-started\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

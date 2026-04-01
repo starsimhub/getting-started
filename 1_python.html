@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ai – Getting Started with Starsim</title>
+<title>Installing Python – Getting Started</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -95,19 +129,19 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./python.html"> 
+    <a class="nav-link active" href="./1_python.html" aria-current="page"> 
 <span class="menu-text">Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./ai.html" aria-current="page"> 
+    <a class="nav-link" href="./2_ai.html"> 
 <span class="menu-text">AI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./guidelines.html"> 
+    <a class="nav-link" href="./3_guidelines.html"> 
 <span class="menu-text">Guidelines</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./comms.html"> 
+    <a class="nav-link" href="./4_comms.html"> 
 <span class="menu-text">Communication</span></a>
   </li>  
 </ul>
@@ -130,14 +164,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started-with-ai-assisted-development" id="toc-getting-started-with-ai-assisted-development" class="nav-link active" data-scroll-target="#getting-started-with-ai-assisted-development">Getting started with AI-assisted development</a>
+  <li><a href="#installing-python" id="toc-installing-python" class="nav-link active" data-scroll-target="#installing-python">Installing Python</a>
   <ul class="collapse">
-  <li><a href="#claude-code-in-vs-code" id="toc-claude-code-in-vs-code" class="nav-link" data-scroll-target="#claude-code-in-vs-code">Claude Code in VS Code</a>
+  <li><a href="#editor-options" id="toc-editor-options" class="nav-link" data-scroll-target="#editor-options">Editor options</a>
   <ul class="collapse">
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a></li>
+  <li><a href="#option-1-vs-code-recommended" id="toc-option-1-vs-code-recommended" class="nav-link" data-scroll-target="#option-1-vs-code-recommended">Option 1: VS Code (recommended)</a></li>
+  <li><a href="#option-2-cursor" id="toc-option-2-cursor" class="nav-link" data-scroll-target="#option-2-cursor">Option 2: Cursor</a></li>
+  <li><a href="#option-3-conda-forge-spyder" id="toc-option-3-conda-forge-spyder" class="nav-link" data-scroll-target="#option-3-conda-forge-spyder">Option 3: Conda-forge + Spyder</a></li>
+  <li><a href="#other-options" id="toc-other-options" class="nav-link" data-scroll-target="#other-options">Other options</a></li>
   </ul></li>
-  <li><a href="#installing-the-starsim-ai-plugin" id="toc-installing-the-starsim-ai-plugin" class="nav-link" data-scroll-target="#installing-the-starsim-ai-plugin">Installing the Starsim AI plugin</a></li>
+  <li><a href="#package-management-pip-vs-uv" id="toc-package-management-pip-vs-uv" class="nav-link" data-scroll-target="#package-management-pip-vs-uv">Package management: pip vs uv</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/starsimhub/getting-started/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -148,50 +184,63 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="getting-started-with-ai-assisted-development" class="level1">
-<h1>Getting started with AI-assisted development</h1>
-<section id="claude-code-in-vs-code" class="level2">
-<h2 class="anchored" data-anchor-id="claude-code-in-vs-code">Claude Code in VS Code</h2>
-<p><a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> is Anthropic’s AI coding assistant that runs directly in your terminal and IDE. It can read your codebase, edit files, run commands, and help you build and debug software.</p>
-<section id="installation" class="level3">
-<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<section id="installing-python" class="level1">
+<h1>Installing Python</h1>
+<p>This guide presents three options for getting up and running with Starsim. It assumes no prior knowledge of Python. If you have used Python before and know what setup you prefer, you are always welcome to use that; Starsim works with (virtually) any Python installation.</p>
+<p>Note: since this document assumes you have no prior Python experience, it does not discuss <a href="https://code.visualstudio.com/docs/python/environments">virtual environments</a>. These are useful (sometimes critical) for juggling multiple different Python projects. However, if you will primarily be working on one Python project at a time, or working on a set of projects that all have similar dependencies, you probably don’t need them.</p>
+<section id="editor-options" class="level2">
+<h2 class="anchored" data-anchor-id="editor-options">Editor options</h2>
+<p>Before installing Starsim, you need to install a Python environment and editor.</p>
+<section id="option-1-vs-code-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-vs-code-recommended">Option 1: VS Code (recommended)</h3>
+<p>VS Code is by far the most commonly used editor among Starsim team members due to its excellent Python and AI support.</p>
 <ol type="1">
-<li>If you don’t have one already, sign up for an Anthropic account.</li>
-<li>In VS Code, install the <a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code">Claude Code extension</a> (see <a href="https://code.claude.com/docs/en/vs-code">installation details</a>)</li>
-<li>Open the Claude Code panel (Ctrl+Shift+P, then “Claude Code: Open”).</li>
-<li>Follow the prompts to authenticate with your Anthropic account.</li>
+<li>Download and install <a href="https://code.visualstudio.com/">VS Code</a>.</li>
+<li>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a>.</li>
+<li>VS Code will prompt you to install Python if it’s not already on your system. Alternatively, download Python from <a href="https://www.python.org/downloads/">python.org</a>.</li>
+<li>From the terminal inside VS Code, install Starsim: <code>pip install starsim</code></li>
+<li>Check that it worked: create a file called e.g.&nbsp;<code>demo.py</code> with the contents <code>import starsim as ss; ss.demo()</code>, and then click on the play button at the top right of the editor. The script should run, produce text output, and produce a plot.</li>
+</ol>
+<p>More info: <a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code Python tutorial</a></p>
+</section>
+<section id="option-2-cursor" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-cursor">Option 2: Cursor</h3>
+<p><a href="https://cursor.com/">Cursor</a> is a popular AI-first editor that is based on (and intercompatible with) VS Code. The main difference is that Cursor uses its own system for managing AI agents. This system is often considerably faster than VS Code + Claude Code, but is often not as capable for large-scale tasks. You might want to try both Cursor and VS Code for a while and see which one you like better.</p>
+<ol type="1">
+<li>Download and install <a href="https://cursor.com/">Cursor</a>.</li>
+<li>Follow the remaining steps above for VS Code.</li>
 </ol>
 </section>
-<section id="usage" class="level3">
-<h3 class="anchored" data-anchor-id="usage">Usage</h3>
+<section id="option-3-conda-forge-spyder" class="level3">
+<h3 class="anchored" data-anchor-id="option-3-conda-forge-spyder">Option 3: Conda-forge + Spyder</h3>
+<p>If you are coming from an <a href="https://posit.co/download/rstudio-desktop/">RStudio</a> background, Spyder might feel most familiar to you. Compared to VS Code, it’s very basic (and lacks AI support), but it excels at quickly running scripts and working in the command line. Some people use VS Code for AI-heavy workflows, and then switch to Spyder for quick interactive development and debugging.</p>
+<ol type="1">
+<li>Install <a href="https://conda-forge.org/download/">Miniforge</a>. This will add the commands <code>python</code>, <code>conda</code>, and <code>pip</code> (among others) to your terminal.</li>
+<li>From your terminal, install Spyder: <code>conda install spyder</code></li>
+<li>Install Starsim: <code>pip install starsim</code></li>
+<li>Check that it worked: from the Spyder console, run <code>import starsim as ss; ss.demo()</code>. This should produce text output and produce a plot. (Note: if you want your plots to appear as new windows rather than in the “Plots” pane, you can change this option under Tools → Preferences.)</li>
+</ol>
+<p>More info: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html">Conda getting started</a> | <a href="https://docs.spyder-ide.org/">Spyder docs</a></p>
+<p><em>Note:</em> If you want to use both Spyder and VS Code, install Conda + Spyder first, then install VS Code. This ensures that VS Code uses the same Python installation as Spyder.</p>
+</section>
+<section id="other-options" class="level3">
+<h3 class="anchored" data-anchor-id="other-options">Other options</h3>
 <ul>
-<li>Open the Claude Code panel in VS Code and type your request in natural language.</li>
-<li>Claude Code can read and edit files, run terminal commands, search your codebase, and more.</li>
-<li>Use <code>/help</code> within Claude Code for a full list of commands.</li>
+<li><a href="https://positron.posit.co/">Positron</a> is a new Python and R editor from the makers of RStudio. It is somewhat like a hybrid between VS Code and Spyder.</li>
+<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> is one of the most popular Python editors. It is extremely fully featured, including GitHub and AI integration. We don’t recommend it here because it has a steeper learning curve than VS Code, and VS Code now has more or less the same features.</li>
+<li>Python files are just text files, so you can use a text editor like <a href="https://www.sublimetext.com/">Sublime</a> and run directly from the command line (<code>python your_script.py</code>). This workflow is useful for power users who need to switch between files and projects quickly, but is less likely to be ideal for someone just getting started in Python.</li>
 </ul>
 </section>
 </section>
-<section id="installing-the-starsim-ai-plugin" class="level2">
-<h2 class="anchored" data-anchor-id="installing-the-starsim-ai-plugin">Installing the Starsim AI plugin</h2>
-<p>The <a href="https://github.com/starsimhub/starsim_ai">starsim-ai</a> plugin gives Claude Code specialized knowledge about the Starsim framework – including architecture, style conventions, and API patterns.</p>
-<p>To install:</p>
-<ol type="1">
-<li>Type <code>/</code> to see the command menu (or click on the slash button)</li>
-<li>Click on “Manage plugins”</li>
-<li>Go to “Marketplaces”</li>
-<li>Add https://github.com/starsimhub/starsim_ai</li>
-<li>Select “Starsim-AI” (and any other plugins you want from that marketplace)</li>
-<li>Go back to the list of plugins, find Starsim-AI, and click “Install”.</li>
-<li>Restart VS Code.</li>
-</ol>
-<p>Once installed, Claude Code will automatically use the plugin’s skills when you’re working on Starsim projects. This includes guidance on:</p>
-<ul>
-<li>Simulation setup and configuration</li>
-<li>Disease models, networks, and interventions</li>
-<li>Calibration and analysis</li>
-<li>Starsim coding style and conventions</li>
-</ul>
-<p><em>Note:</em> While Claude usually picks up the Starsim-AI plugin automatically, you can also ask to use it explicitly, e.g.&nbsp;“Use the Starsim-AI plugin to help me create tests for this project.”</p>
+<section id="package-management-pip-vs-uv" class="level2">
+<h2 class="anchored" data-anchor-id="package-management-pip-vs-uv">Package management: pip vs uv</h2>
+<p>The instructions above use <code>pip</code>, which is the standard Python package installer that comes bundled with Python. However, you may increasingly see projects provide instructions for using <code>uv</code> instead:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install uv (see https://docs.astral.sh/uv/)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LsSf</span> https://astral.sh/uv/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Use it like pip</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip install somepackage</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>uv</code> is much faster than <code>pip</code>, but if you’re reading this guide, the difference is almost certainly going to be negligble to you since you are unlikely to be creating new Python environments multiple times a day. The two tools are interchangeable, so use whichever you prefer.</p>
 
 
 </section>
@@ -432,7 +481,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/starsimhub\.github\.io\/getting-started\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

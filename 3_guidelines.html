@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>comms – Getting Started with Starsim</title>
+<title>Coding guidelines – Getting Started</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./python.html"> 
+    <a class="nav-link" href="./1_python.html"> 
 <span class="menu-text">Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ai.html"> 
+    <a class="nav-link" href="./2_ai.html"> 
 <span class="menu-text">AI</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./guidelines.html"> 
+    <a class="nav-link active" href="./3_guidelines.html" aria-current="page"> 
 <span class="menu-text">Guidelines</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./comms.html" aria-current="page"> 
+    <a class="nav-link" href="./4_comms.html"> 
 <span class="menu-text">Communication</span></a>
   </li>  
 </ul>
@@ -130,14 +130,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#communication-and-culture" id="toc-communication-and-culture" class="nav-link active" data-scroll-target="#communication-and-culture">Communication and culture</a>
+  <li><a href="#coding-guidelines" id="toc-coding-guidelines" class="nav-link active" data-scroll-target="#coding-guidelines">Coding guidelines</a>
   <ul class="collapse">
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
-  <li><a href="#slack" id="toc-slack" class="nav-link" data-scroll-target="#slack">Slack</a></li>
-  <li><a href="#teams" id="toc-teams" class="nav-link" data-scroll-target="#teams">Teams</a></li>
-  <li><a href="#email" id="toc-email" class="nav-link" data-scroll-target="#email">Email</a></li>
-  <li><a href="#meetings" id="toc-meetings" class="nav-link" data-scroll-target="#meetings">Meetings</a></li>
-  <li><a href="#general-tips" id="toc-general-tips" class="nav-link" data-scroll-target="#general-tips">General tips</a></li>
+  <li><a href="#style-guide" id="toc-style-guide" class="nav-link" data-scroll-target="#style-guide">Style guide</a></li>
+  <li><a href="#engineering-guide" id="toc-engineering-guide" class="nav-link" data-scroll-target="#engineering-guide">Engineering guide</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/starsimhub/getting-started/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -148,39 +144,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="communication-and-culture" class="level1">
-<h1>Communication and culture</h1>
-<section id="github" class="level2">
-<h2 class="anchored" data-anchor-id="github">GitHub</h2>
-<p><a href="https://github.com/starsimhub">GitHub</a> is where Starsim is built and lives. Use to open issues, start discussions, plan projects, etc. Everything on GitHub is public by default, so it’s the best place to ensure transparency and build commuity. Of course, never share anything sensitive on GitHub (either in a commit or in a comment).</p>
+<section id="coding-guidelines" class="level1">
+<h1>Coding guidelines</h1>
+<section id="style-guide" class="level2">
+<h2 class="anchored" data-anchor-id="style-guide">Style guide</h2>
+<p>All code should follow the conventions in the <a href="https://github.com/starsimhub/style_guide">Starsim style guide</a>. This covers Python style, documentation, testing, and design philosophy.</p>
 </section>
-<section id="slack" class="level2">
-<h2 class="anchored" data-anchor-id="slack">Slack</h2>
-<p><a href="https://starsimhub.slack.com">Slack</a> is our primary means of rapid back-and-forth communication, when it would be impractical to use GitHub (e.g.&nbsp;many messages back and forth discussing a bug or potential feature). Use it for quick questions, status updates, sharing links, and informal discussion. Keep conversations in the appropriate channels rather than DMs when possible so others can benefit.</p>
-</section>
-<section id="teams" class="level2">
-<h2 class="anchored" data-anchor-id="teams">Teams</h2>
-<p>The Gates Foundation uses Teams for internal team discussions. For discussions that are either intentionally public (e.g., planning a new feature) or for which there is no harm in being public (e.g., who is going to review a PR), prefer GitHub or Slack. For discussions that are or could be sensitive (e.g., planning an internal application, discussing non-public data, etc.), always use Teams.</p>
-</section>
-<section id="email" class="level2">
-<h2 class="anchored" data-anchor-id="email">Email</h2>
-<p>Use email for communication with external collaborators, formal requests, and anything that needs a longer-form written record. For Starsim technical matters, prefer GitHub or Slack.</p>
-</section>
-<section id="meetings" class="level2">
-<h2 class="anchored" data-anchor-id="meetings">Meetings</h2>
-<ul>
-<li><strong>Stand-ups</strong>: Brief daily or weekly check-ins to share progress and flag blockers.</li>
-<li><strong>Sprint planning</strong>: Periodic meetings to prioritize and assign work.</li>
-<li><strong>Ad hoc</strong>: Scheduled as needed for design discussions, debugging sessions, or onboarding.</li>
-</ul>
-</section>
-<section id="general-tips" class="level2">
-<h2 class="anchored" data-anchor-id="general-tips">General tips</h2>
-<ul>
-<li>If you’re stuck on something for more than ~30 minutes, ask for help.</li>
-<li>Document decisions and context in GitHub issues or PRs, not just in Slack (where messages get buried).</li>
-<li>When in doubt about process or conventions, check the <a href="https://github.com/starsimhub/style_guide">style guide</a> or ask a teammate.</li>
-</ul>
+<section id="engineering-guide" class="level2">
+<h2 class="anchored" data-anchor-id="engineering-guide">Engineering guide</h2>
+<p>For broader engineering practices, project management, and collaboration workflows, see the <a href="https://docs.google.com/document/d/1U6CvI5pINMRAm1hI5FzB1t2UCYADG0QLhqYoVezlCaA/edit">engineering guide</a>.</p>
 
 
 </section>
@@ -421,7 +393,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/starsimhub\.github\.io\/getting-started\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
