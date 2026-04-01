@@ -17,17 +17,20 @@ theme:
   font:
     text: Raleway
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    # Light Mode
+    - scheme: default
       toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
+        icon: material/weather-night
+        name: Light mode
+      primary: white
+      accent: cyan
+    # Dark Mode
+    - scheme: slate
       toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: black
+      accent: cyan
   features:
     - navigation.instant
     - navigation.tracking
